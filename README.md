@@ -1,6 +1,6 @@
 # LitLens Recommender
 
-<img src="./logo.png" width="320" height="300">
+<img src="./logo.png" width="389" height="357">
 
 ## Overview
 LitLens is a sophisticated book recommendation engine designed for a literature e-commerce platform, aiming to connect readers with literature that resonates with their interests. LitLens stands out by not relying on a single algorithm but by blending different techniques to create a more accurate and personalised shopping experience: non-personalised, collaborative filtering, content-based, and context-aware algorithms. This multidimensional approach is tailored to enhance user engagement and satisfaction on literature e-commerce sites, ultimately driving sales through smarter recommendations.

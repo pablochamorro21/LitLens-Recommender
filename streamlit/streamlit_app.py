@@ -1,4 +1,4 @@
-# LIBRARIES
+# Libraries
 import pickle
 import pandas as pd
 import numpy as np
@@ -14,14 +14,18 @@ my_seed = 3325
 random.seed(my_seed)
 np.random.seed(my_seed)
 
-# LOADING THE MAIN DATASETS
-file_path = "/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/books_df.csv"
+path = " "
+# /Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/
+# /Users/alexanderbenady/venv/recommendations/
+
+# Loadging the item metadata + user-item interaction datasets
+file_path = path + "books_df.csv"
 books_df = pd.read_csv(file_path)
-file_path_1 = "/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/reviews_df.csv"
+file_path_1 = path + "reviews_df.csv"
 row_to_skip = 376979
 reviews_df = pd.read_csv(file_path_1, skiprows=[row_to_skip])
 
-# Convert 'read_at' timestamp to datetime
+# Convert 'read_at' timestamp to datetime,and classifying with month names for contextual pre-filtering
 reviews_df['timestamp'] = pd.to_datetime(reviews_df['read_at'], format='%a %b %d %H:%M:%S %z %Y', errors='coerce')
 reviews_df['timestamp'] = pd.to_datetime(reviews_df['timestamp'], utc=True, errors='coerce')
 reviews_df = reviews_df.dropna(subset=['timestamp'])
@@ -457,7 +461,7 @@ def main():
     
     st.title("LitLens")
     
-    st.image("/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/logo.png", width=200, use_column_width=True, output_format='auto')  # Ensure path is correct
+    st.image(path + "logo.png", width=200, use_column_width=True, output_format='auto')  # Ensure path is correct
 
     text = st.empty()
 

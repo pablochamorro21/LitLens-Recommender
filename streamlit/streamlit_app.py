@@ -497,15 +497,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-#   user_id above 20 = 91efd74c298b00a55ef9bcf345ec9cc3
-#   user_id below 20 = ca803a8c561eb0a4304e7a91a3841e50
-#   user_id = NaN for Random Recommender
-
-
-#df_recommendations = finalfunc()
-#print(df_recommendations) 
-
-# streamlit run '/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/streamlit_chamorro2.py'

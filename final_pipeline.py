@@ -8,11 +8,19 @@ from sklearn.metrics.pairwise import pairwise_distances
 import random 
 from surprise.prediction_algorithms.algo_base import AlgoBase
 
+my_seed = 3325
+random.seed(my_seed)
+np.random.seed(my_seed)
+
+
+path = " "
+# /Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/
+# /Users/alexanderbenady/venv/recommendations/
 
 # Loadging the item metadata + user-item interaction datasets
-file_path = "/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/books_df.csv"
+file_path = path + "books_df.csv"
 books_df = pd.read_csv(file_path)
-file_path_1 = "/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/reviews_df.csv"
+file_path_1 = path + "reviews_df.csv"
 row_to_skip = 376979
 reviews_df = pd.read_csv(file_path_1, skiprows=[row_to_skip])
 
@@ -32,7 +40,7 @@ all_df_filtered.set_index("book_id", inplace=True)
 
 ## Collaborative + Context model
 
-file_path = "/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/collaborative_filtering_model.pkl"
+file_path = path + "collaborative_filtering_model.pkl"
 with open(file_path, 'rb') as file:
     collaborative_f_model = pickle.load(file)
 
@@ -94,7 +102,7 @@ class MyRandomAlgorithm(AlgoBase):
         # Return self to allow for chaining or method calls after fitting.
         return self
 
-file_path = "/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/random_model.pkl"
+file_path = path + "random_model.pkl"
 with open(file_path, 'rb') as file:
     random_model = pickle.load(file)
 
@@ -159,7 +167,7 @@ class MyPopularAlgorithm(AlgoBase):
         # Return self to allow method chaining or calls after fitting.
         return self
 
-file_path = "/Users/pablochamorro/Desktop/Coding/Recommendation Engines/project/popular_model.pkl"
+file_path = path + "popular_model.pkl"
 with open(file_path, 'rb') as file:
     popular_model = pickle.load(file)
 

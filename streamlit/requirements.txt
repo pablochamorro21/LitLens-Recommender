@@ -1,6 +1,0 @@
-pandas 
-numpy 
-sentence-transformers 
-scikit-learn 
-scikit-surprise
-streamlit

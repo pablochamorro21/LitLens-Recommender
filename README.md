@@ -139,7 +139,10 @@ Here are the formatted markdown tables for both the seasonal and monthly context
 ## Final Code
 
 First, install these libraries in your environment:
+
 ```pip install pandas numpy sentence-transformers scikit-learn scikit-surprise``` 
+
+If you want to use the streamlit app, read further on.
 
 ### Logic
 - Users with fewer than 20 ratings but more than zero are in a transitional phase where they have started interacting with the system but haven't provided enough data for an effective collaborative filtering.
@@ -175,6 +178,18 @@ The final code firstly loads the two dataframes, books_df (books metadata) and r
 - **Recommendation Decision Logic**: Decides which recommendation approach to use based on the number of ratings associated with the user ID.
 - Executes the appropriate recommendation function and displays the results.
   - Potentially, you could specify a book for more targeted suggestions.
+
+### Streamlit 
+
+First, install streamlit on top of the previously mentioned libraries:
+
+```pip install pandas numpy sentence-transformers scikit-learn scikit-surprise streamlit``` 
+
+Open the folder ./streamlit, and execute the .py file called streamlit_app.py:
+
+```streamlit run streamlit_app.py```
+
+If it does not automatically open, run http://localhost:8501 in your browser. 
 
 ## Conclusion
 

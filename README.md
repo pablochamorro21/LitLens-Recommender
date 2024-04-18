@@ -15,6 +15,10 @@ The resulting dataset contained details on 25,833 books. To enrich these details
 
 The original dataset lacked comprehensive user data, prompting us to create a synthetic table listing each user's ID and their number of reviews for 35,692 users. Finally, we converted the data from JSON to CSV format for easier access and manipulation in future analyses.
 
+Our final data can be found:
+- https://drive.google.com/file/d/1vbjF4F5D2gJnZXmRmT0_j-O_wCM6iaLB/view?usp=drive_link
+- https://drive.google.com/file/d/1li7yAIjZkc-YJQH9YFxV2zo7BhIM-kX7/view?usp=sharing
+  
 ### Data Exploration
 
 - Ratings predominantly range from 4/5 to 5/5, likely due to selection bias as users typically choose books they expect to enjoy.
